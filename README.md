@@ -1,1 +1,3 @@
-# cis-91
+# Cabrillo CIS-91 Public Course Files 
+
+This is a work in progress.
