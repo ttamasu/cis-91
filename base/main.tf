@@ -37,7 +37,7 @@ resource "google_compute_network" "vpc_network" {
 
 resource "google_compute_instance" "vm_instance" {
   name         = "cis91"
-  machine_type = "f1-micro"
+  machine_type = "e2-micro"
 
   boot_disk {
     initialize_params {
@@ -57,7 +57,7 @@ resource "google_compute_firewall" "ssh-rule" {
   network = google_compute_network.vpc_network.name
   allow {
     protocol = "tcp"
-    ports = ["22"]
+    ports = ["22", "80"]
   }
   source_ranges = ["0.0.0.0/0"]
 }
