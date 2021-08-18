@@ -52,8 +52,8 @@ resource "google_compute_instance" "vm_instance" {
   }
 }
 
-resource "google_compute_firewall" "ssh-rule" {
-  name = "allow-ssh"
+resource "google_compute_firewall" "default-firewall" {
+  name = "default-firewall"
   network = google_compute_network.vpc_network.name
   allow {
     protocol = "tcp"
